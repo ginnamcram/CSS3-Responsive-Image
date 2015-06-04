@@ -11,21 +11,24 @@
 	$.fn.extend({
 		responsiveImage: function(){
 			return this.each(function(){
-				var $this = $(this);
-				var css = baseCSS;
-				var model,imageID = Math.floor(Math.random()*999999999);
+				var $this 	= $(this);
+				var css 	= baseCSS;
+				//create a unique id
+				var imageID = Math.floor(Math.random()*999999999) + '-' + Math.floor(Math.random()*999999999);
+				var model;
 				for (var res in resolutions) {
+					//create model for tmpl
 					model = {
 						id 	: imageID,
 						size: resolutions[res],
 						url : $this.data(res)
 					};
-					//render
+					//render tmpl
 					css += styleTmpl.replace(/%[^%]+%/gi,function(needle){
 						return model[ needle.substr(1,needle.length-2) ];
 					});
 				};
-				
+				//replace original and add custom style before the dom
 				$this
 					.before($('<style type="text/css" />').html(css))
 					.replaceWith( $('<div/>').addClass('responsive-image responsive-image-' + imageID));
