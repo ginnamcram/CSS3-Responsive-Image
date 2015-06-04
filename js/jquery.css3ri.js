@@ -6,7 +6,7 @@
 		md: 756,
 		lg: 1024
 	};
-	var baseCSS 	= '.responsive-image{background-size: cover; width:100%; height:100%;}';
+	var baseCSS 	= '.responsive-image{background-size: contain; background-repeat: no-repeat; width:100%; height:100%;}';
 	var styleTmpl 	= '@media(min-width: %size%px){ .responsive-image-%id%{background-image:url("%url%");} }';
 	$.fn.extend({
 		responsiveImage: function(){
