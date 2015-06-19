@@ -18,11 +18,11 @@
 		'1x1'	: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYTECAjyZX/KwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADUlEQVQI12NgYGBgAAAABQABXvMqOgAAAABJRU5ErkJggg==',
 		/** 35mm still camera film, iPhone (until iPhone 5) displays **/
 		'2x3'	: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAADCAYAAAC56t6BAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYTEQgC2WMr6AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAC0lEQVQI12NgwAkAABsAAVJE5KkAAAAASUVORK5CYII=',
-		/** 35mm still camera film, iPhone (until iPhone 5) displays (Lansscape) **/
+		/** 35mm still camera film, iPhone (until iPhone 5) displays (Landscape) **/
 		'3x2'	: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYTEQYaVIyeMAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAC0lEQVQI12NgwAUAABoAASRETuUAAAAASUVORK5CYII=',
-		/** Some (not all) 20th century computer monitors (VGA, XGA, etc.), standard-definition television  (Lansscape) **/
+		/** Some (not all) 20th century computer monitors (VGA, XGA, etc.), standard-definition television  (Landscape) **/
 		'4x3'	: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYTECQjrfk6LwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12NgIBkAAAAzAAFWfYMKAAAAAElFTkSuQmCC',
-		/** Widescreen (Lansscape) **/
+		/** Widescreen (Landscape) **/
 		'16x9'	: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYTECQG5v3uaAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAD0lEQVQoz2NgGAWjgAoAAAJJAAEMrHXpAAAAAElFTkSuQmCC'
 	};
 	var baseCSS 	= '.responsive-image{background-size: cover; background-repeat: no-repeat; width:100%;} .responsive-image img{width:100%;}';
