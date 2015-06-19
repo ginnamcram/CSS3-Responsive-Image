@@ -1,7 +1,7 @@
 /**
 *	Simple jQuery Plugin to genereate Responsive Image loading based on CSS Media Queries
 *	@autor Marc Mannig
-*	@license Underscore may be freely distributed under the MIT license.
+*	@license This Plugin may be freely distributed under the MIT license.
 */
 (function($){
 	'use strict';
