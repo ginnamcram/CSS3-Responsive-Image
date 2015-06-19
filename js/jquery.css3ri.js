@@ -11,7 +11,13 @@
 		md: 756,
 		lg: 1024
 	};
-	var baseCSS 	= '.responsive-image{background-size: contain; background-repeat: no-repeat; width:100%; height:100%;}';
+	//transparent pngs to enshure image height scales with the correct aspect ratio
+	var aspectRatio = {
+		'1x1'	: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYTECAjyZX/KwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADUlEQVQI12NgYGBgAAAABQABXvMqOgAAAABJRU5ErkJggg==',
+		'4x3'	: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYTECQjrfk6LwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12NgIBkAAAAzAAFWfYMKAAAAAElFTkSuQmCC',
+		'16x9'	: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYTECQG5v3uaAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAD0lEQVQoz2NgGAWjgAoAAAJJAAEMrHXpAAAAAElFTkSuQmCC'
+	};
+	var baseCSS 	= '.responsive-image{background-size: contain; background-repeat: no-repeat; width:100%;} .responsive-image img{width:100%;}';
 	var styleTmpl 	= '@media(min-width: %size%px){ .responsive-image-%id%{background-image:url("%url%");} }';
 	$.fn.extend({
 		responsiveImage: function(){
@@ -33,10 +39,15 @@
 						return model[ needle.substr(1,needle.length-2) ];
 					});
 				};
-				//replace original and add custom style before the dom
+				var ratioData;
+				if( ratioData = aspectRatio[$this.data('aspect')] )
+					$this.attr('src', ratioData);
+				else
+					$this.hide();
+				//wrap original and add custom style before the dom
 				$this
 					.before($('<style type="text/css" />').html(css))
-					.replaceWith( $('<div/>').addClass('responsive-image responsive-image-' + imageID));
+					.wrap( $('<div/>').addClass('responsive-image responsive-image-' + imageID));
 					
 			});
 		}
