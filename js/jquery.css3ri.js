@@ -55,7 +55,11 @@
 				//wrap original and add custom style before the dom
 				$this
 					.before($('<style type="text/css" />').html(css))
-					.wrap( $('<div/>').addClass('responsive-image responsive-image-' + imageID));
+					.wrap( $('<div/>')
+								.addClass('responsive-image responsive-image-' + imageID)
+								.addClass($this.attr('class')))
+					.removeAttr('class'); //copy style classes to allow override width etc..
+
 					
 			});
 		}
