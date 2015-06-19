@@ -36,6 +36,7 @@
 				var imageID = Math.floor(Math.random()*999999999) + '-' + Math.floor(Math.random()*999999999);
 				var model;
 				for (var res in resolutions) {
+					if(!$this.data(res)) continue;
 					//create model for tmpl
 					model = {
 						id 	: imageID,
@@ -59,8 +60,6 @@
 								.addClass('responsive-image responsive-image-' + imageID)
 								.addClass($this.attr('class')))
 					.removeAttr('class'); //copy style classes to allow override width etc..
-
-					
 			});
 		}
 	});
