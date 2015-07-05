@@ -19,9 +19,7 @@ Create a placeholder Image with the
 		data-lg="../img/katzen_lg.jpg">
 ```
 ### Markup Options
-
-|`data-aspect`|Image aspect ratio, is needed to keep the height of the image correct when resizing the screen.
-Predefined values: 1x1, 2x3, 3x2, 4x3, 16x9|
+|`data-aspect`|Image aspect ratio, is needed to keep the height of the image correct when resizing the screen.Predefined values: 1x1, 2x3, 3x2, 4x3, 16x9|
 |`data-xs`|Image path for Extra small devices	eg. Phones (<768px)|
 |`data-sm`|Image path for Small devices eg. Tablets (≥768px)|
 |`data-md`|Image path for Medium devices eg. Desktops (≥992px)|
